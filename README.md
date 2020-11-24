@@ -25,7 +25,7 @@ https://github.com/ansible/ansible/issues/72719
 
 11. End process by `kill -s HUP <pid>` where `<pid>` is from the previous step
 
-12. Note that process in the initial shell now continues despite warnings of the form:
+12. Note that process in the initial shell now continues successfully despite warnings of the form (keep hitting Enter at prompts):
 
 ```
     amazon-ebs: TASK [Gathering Facts] *********************************************************
