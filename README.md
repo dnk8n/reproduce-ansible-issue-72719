@@ -15,7 +15,7 @@ https://github.com/ansible/ansible/issues/72719
 
 6. `ansible-galaxy install -r ../ansible/requirements.yml`
 
-7. `packer build -debug ec2-base.json`
+7. `packer build -debug ec2-base.json` (keep hitting Enter until you see `Pausing after run of step 'StepConnect'. Press enter to continue.`)
 
 8. In a seperate shell (same directory), `ssh -i ec2_amazon-ebs.pem ubuntu@<instance-public-ip>` getting `<instance-public-ip>` from the EC2 console
 
