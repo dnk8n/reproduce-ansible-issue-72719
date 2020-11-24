@@ -15,15 +15,17 @@ https://github.com/ansible/ansible/issues/72719
 
 6. `ansible-galaxy install -r ../ansible/requirements.yml`
 
-7. `packer build -debug ec2-base.json` (keep hitting Enter until you see `Pausing after run of step 'StepConnect'. Press enter to continue.`)
+7. `packer build -debug ec2-base.json`
 
-8. In a seperate shell (same directory), `ssh -i ec2_amazon-ebs.pem ubuntu@<instance-public-ip>` getting `<instance-public-ip>` from the EC2 console
+8. Keep hitting Enter until after `Pausing before the next provisioner . Press enter to continue.` (Ansible will start provisioning)
 
-9. `ps aux | grep '/bin/sh -c /usr/bin/python3 && sleep 0'` to find the process causing the hanging
+9. In a seperate shell (same directory), `ssh -i ec2_amazon-ebs.pem ubuntu@<instance-public-ip>` getting `<instance-public-ip>` from the EC2 console
 
-10. End process by `kill -s HUP <pid>` where `<pid>` is from the previous step
+10. `ps aux | grep '/bin/sh -c /usr/bin/python3 && sleep 0'` to find the process causing the hanging
 
-11. Note that process in original shell now continues despite warnings of the form:
+11. End process by `kill -s HUP <pid>` where `<pid>` is from the previous step
+
+12. Note that process in the initial shell now continues despite warnings of the form:
 
 ```
     amazon-ebs: TASK [Gathering Facts] *********************************************************
