@@ -1,6 +1,8 @@
 # reproduce-ansible-issue-72719
 https://github.com/ansible/ansible/issues/72719
 
+# Update: Workaround found (see [fix](https://github.com/dnk8n/reproduce-ansible-issue-72719/tree/fix) branch [@commit](https://github.com/dnk8n/reproduce-ansible-issue-72719/commit/4d46e5554ac8c6ffbbec72e669313841f08603ef))
+
 # Steps to reproduce
 
 1. `cd` to root of this repo
