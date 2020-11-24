@@ -45,7 +45,8 @@
         "playbook_file": "../ansible/ec2-base.playbook.yml",
         "ansible_env_vars": ["ANSIBLE_FORCE_COLOR=true", "ANSIBLE_VERBOSITY=0"],
         "extra_arguments": ["-e username={{user `username`}}"],
-        "user": "{{user `username`}}"
+        "user": "{{user `username`}}",
+        "use_proxy": false
       }
     ]
   }
